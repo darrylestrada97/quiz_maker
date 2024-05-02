@@ -4,7 +4,7 @@ import PlaceHolder from "@/app/Components/PlaceHolder";
 
 
 function QuizzesArea(props){
-    const allQuizzes =[];
+    const allQuizzes =[1];
     return (
         <div className="poppins mx-12 mt-10 ">
             {allQuizzes.length === 0 ? (<PlaceHolder></PlaceHolder>) : (

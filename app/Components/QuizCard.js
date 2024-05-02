@@ -6,7 +6,7 @@ import {faBullseye, faCircleCheck, faCode, faEllipsis, faPlay} from '@fortawesom
 
 function QuizCard(props) {
     return (
-        <div className="rounded-[10px] flex flex-col gap-2 border bg-amber-300 bg-white p-4 max-h-96 max-w-96">
+        <div className="rounded-[10px] flex flex-col gap-2 border bg-amber-300 bg-white p-4">
             <div className="relative bg-green-700 w-full h-32 flex justify-center items-center rounded-md">
                 <div className="absolute cursor-pointer top-3 right-3">
                     <FontAwesomeIcon

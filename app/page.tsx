@@ -1,7 +1,13 @@
+import Navbar from "@/app/Components/Navbar";
+import QuizzesArea from "@/app/Components/QuizzesArea";
+
 export default function Home() {
   return (
     <div>
-      <h1>Quiz Maker</h1>
+      <header>
+          <Navbar />
+      </header>
+        <QuizzesArea />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import {Inter, Poppins} from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Navbar from "@/app/Components/Navbar";
-import QuizzesArea from "@/app/Components/QuizzesArea";
+
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -28,12 +28,8 @@ export default function RootLayout({children,}: Readonly<{
             <title>Quiz Maker</title>
         </head>
         <body className={poppins.variable}>
-        <header>
-            <Navbar></Navbar>
-        </header>
             <main>
                 {children}
-                <QuizzesArea/>
             </main>
         </body>
         </html>
