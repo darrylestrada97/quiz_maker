@@ -17,8 +17,33 @@ function page(props) {
 export default page;
 
 function QuizStartHeader() {
-    return(<div></div>);
+    return (<div className={"flex justify-between"}>
+        <div className={"flex gap-1 justify-center "}>
+            <div className={"bg-green-700 w-12 h-12 flex items-center justify-center p-2 rounded-md m-2"}>
+                <FontAwesomeIcon
+                    icon={faCode}
+                    width={20}
+                    height={20}
+                    className={"text-white"}
+                />
+            </div>
+            <div className={"flex flex-col gap-0.5 p-1"}>
+                <h2 className={"font-bold text-xl text-green-800"}>Javascript Quiz</h2>
+                <p className={"text-green-700"}>10 Questions</p>
+            </div>
+        </div>
+        <div className={"flex gap-2 items-center"}>
+            <FontAwesomeIcon
+                icon={faStopwatch}
+                width={20}
+                height={20}
+                className={"text-green-700"}
+            />
+            <span className={"text-green-700"}>00:00:00</span>
+        </div>
+    </div>);
 }
+
 function QuizStartQuestions() {
     return (
         <div className={"poppins rounded-sm m-9 w-9/12"}>

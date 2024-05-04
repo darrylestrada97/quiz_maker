@@ -27,7 +27,7 @@ export default function RootLayout({children,}: Readonly<{
         <head>
             <title>Quiz Maker</title>
         </head>
-        <body className={poppins.variable}>
+        <body className="poppins.variable mt-0" >
             <main>
                 {children}
             </main>
