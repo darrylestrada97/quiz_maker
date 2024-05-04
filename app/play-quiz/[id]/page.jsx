@@ -1,21 +1,24 @@
-import {faCode, faStopwatch} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+"use client";
+import { faCode, faStopwatch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import useGlobalContext from "../../../ContextApi";
+import useGlobalContextProvider from "@/app/ContextApi";
 
-function page(props) {
-    const {allQuizzes} = useGlobalContext();
+function Page(props) {
+
+    const { allQuizzes } = useGlobalContextProvider();
+    console.log(allQuizzes);
     return (
         <div className="poppins flex flex-col px-24 mt-[35px]">
-            <QuizStartHeader/>
+            <QuizStartHeader />
             <div className={"mt-10 flex items-center justify-center"}>
-                <QuizStartQuestions/>
+                <QuizStartQuestions />
             </div>
         </div>
     )
 }
 
-export default page;
+export default Page;
 
 function QuizStartHeader() {
     return (<div className={"flex justify-between"}>
