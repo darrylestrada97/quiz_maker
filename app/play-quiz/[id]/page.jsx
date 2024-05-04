@@ -1,9 +1,10 @@
 import {faCode, faStopwatch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
-
+import useGlobalContext from "../../../ContextApi";
 
 function page(props) {
+    const {allQuizzes} = useGlobalContext();
     return (
         <div className="poppins flex flex-col px-24 mt-[35px]">
             <QuizStartHeader/>
@@ -48,7 +49,7 @@ function QuizStartQuestions() {
     return (
         <div className={"poppins rounded-sm m-9 w-9/12"}>
             <div className={"flex justify-center items-center gap-2"}>
-                <div className={"bg-green-700 flex justify-center items-center rounded-md w-11 h-11 text-white"}>
+                <div className={"bg-green-700 flex justify-center items-center rounded-md w-11 h-11 text-white p-3"}>
                     1
                 </div>
                 <p>
@@ -69,7 +70,7 @@ function QuizStartQuestions() {
                     D: boolean
                 </div>
             </div>
-            <div className={"flex justify-end mt-7 pr-4"}>
+            <div className={"flex justify-end mt-7 "}>
                 <buttom className={"p-2 px-5 text-[15px] text-white rounded-md bg-green-700 mr-[70px]"}>Submit</buttom>
                 {/*<button className={"bg-green-700 text-white p-3 rounded-md"}>submit</button>*/}
             </div>
