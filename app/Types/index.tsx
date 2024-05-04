@@ -11,7 +11,7 @@ interface Statistics {
   incorrectAttempts: number;
 }
 
-interface QuizQuestion {
+export interface QuizQuestion {
   id: number;
   mainQuestion: string;
   choices: Choice[];
