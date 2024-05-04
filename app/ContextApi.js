@@ -1,13 +1,24 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { quizzesData } from "./QuizzesData";
 
 const GlobalContext = createContext();
 
 export function ContextProvider({ children }) {
   const [allQuizzes, setAllQuizzes] = useState([]);
+  const [selectQuizToStart, setSelectQuizToStart] = useState(null);
+  useEffect(() => {
+    setAllQuizzes(quizzesData);
+  }, []);
   return (
-    <GlobalContext.Provider value={{ allQuizzes, setAllQuizzes }}>
+    <GlobalContext.Provider
+      value={{
+        allQuizzes,
+        setAllQuizzes,
+        quizToStartObject: { selectQuizToStart, setSelectQuizToStart },
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
